@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="plugin/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="plugin/assets/owl.theme.default.min.css">
+</head>
+<style>
+    .heading h1 {
+        text-align: center;
+    }
+</style>
+<body>
+    <div class="heading">
+        <h1>Watch<span id="count">1000</span> + movies avaliable</h1>
+    </div>
+    <div class="owl-carousel owl-theme">
+        <div class="item"><img src="images/2.jpg" alt=""></div>
+        <div class="item"><img src="images/4.jpg" alt=""></div>
+        <div class="item"><img src="images/8.jpg" alt=""></div>   
+        <div class="item"><img src="images/9.jpg" alt=""></div> 
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="countMe/countMe.min.js"></script>
+    <script src="plugin/owl.carousel.min.js"></script>
+    
+     <script>
+        $("#count").countMe(0,0)
+        $('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+   /*  Auto paly start */
+    autoplay:true,
+    autoplayTimeout:2000,
+    autoplayHoverPause:true,
+   /*  Auto paly end */
+    responsive:{ 
+        0:{
+            items:1
+        },
+        600:{
+            items:1
+        },
+        1000:{
+            items:1
+        }
+    }
+})
+     </script>
+</body>
+</html>
